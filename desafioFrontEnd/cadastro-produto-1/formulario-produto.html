@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Itacolomi</title>
+    <link rel="stylesheet" href="style-formulario-produto.css">
+</head>
+<body>
+    <div class="header">
+        <figure class="logo__figure">
+          <img src="../img/LOGO.svg" alt="logo"/>
+        </figure>
+        <div id="name_user">Olá, Júlia!</div>
+        <figure class="sair__figure">
+            <img src="../img/ic_exit.svg" alt="sair"/>
+            <label for="sair">Sair</label>
+          </figure>
+
+    </div>
+    <main>
+        <figure class="ic_back">
+            <img src="../img/ic_back.svg">
+        </figure>
+        <div class="flex-column conteiner">
+            <div class="cadastro_produto">
+                <figure class="icon_product">
+                    <img src="../img/ic_produtos.svg" alt="product">
+                    <p>Cadastrar produtos</p>
+                </figure>
+                    <p class="etapa">Etapa 1 de 2</p>
+            </div>
+        
+            <div class="flex-column formulario">
+                <input type="text" placeholder="Nome do Produto" id="name">
+                <input type="text" placeholder="Descrição" id="description">
+                <input type="number" placeholder="Valor (R$)" id="value">
+                <input type="text" placeholder="Categoria" id="category">
+            </div>
+
+
+            <div class="flex-column porcao">
+                <p>Para quantas pessoas?</p>
+                <span>
+                    <input type="checkbox" name="umaPessoa">
+                    <label for="umaPessoa">Serve 1 pessoa</label>
+                </span>
+                <span>
+                    <input type="checkbox" name="duasPessoas">
+                    <label for="duasPessoas">Serve 2 pessoas</label>
+                </span>
+                <span>
+                    <input type="checkbox" name="familia">
+                    <label for="familia">Família - até 4 pessoas</label>
+                </span>
+            </div>
+
+            <div class="flex-column disponibilidade">
+                <p>Disponibilidade:</p>
+                <span>
+                    <input type="checkbox" name="disponivel">
+                    <label for="disponivel">Produto Disponível</label>    
+                </span>
+                <span>
+                    <input type="checkbox" name="indisponivel">
+                    <label for="indisponivel">Produto Indisponível</label>
+                </span>               
+            </div>
+
+            <form>
+                <button type="submit">Próximo</button>
+            </form>
+        </div>      
+    </main>
+
+    <footer>
+        <p>2022 | <a href="https://usemobile.com.br/">Usemobile.</a> Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
