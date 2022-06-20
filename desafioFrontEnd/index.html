@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Itacolomi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <figure class="logo__figure">
+          <img src="img/LOGO.svg" alt="logo"/>
+        </figure>
+        <div id="name_user">Olá, Júlia!</div>
+        <figure class="sair__figure">
+            <img src="img/ic_exit.svg" alt="sair"/>
+            <label for="sair">Sair</label>
+          </figure>
+    </div>
+
+    <div>
+        <nav class="categoria"></nav>
+
+        <div class="conteiner"> 
+            <div class="search">
+                <figure class="icone_produto">
+                    <img src="img/ic_produtos.svg" id="icon_prouto">
+                    <div id="tag_produtos">Produtos Cadastrados</div>
+                </figure>
+            
+                <div class="busca_categoria">
+                    <input type="text" placeholder="Buscar na Categoria" id="busca">
+                </div>
+                
+               <select class="ordenacao" name="ordenacao">
+                    <option value="menorPreço">Menor Preço</option>
+                    <option value="maiorPreço">Maior Preço</option>
+               </select>
+            </div>
+
+            <div id="cadastrar_produto">
+                <figure class="ic_notfound">
+                    <img src="img/ic_notfound.svg" alt="nao_encontrado">
+                </figure>
+                <p class="texto1">Ops!<br>Nenhum produto cadastrado</p>
+                <p class="texto2">Cadastre o seu produto<br>e comece a vender agora mesmo</p>
+                <button class="default-button" type="button" onclick="createProduct()">Cadastrar Produtos</button>
+            </div>
+
+            <div class="conteiner_produtos col-60"></div>
+
+            <div id="novo-produto" class="flex-right col-60">
+                <button class="default-button" onclick="createProduct()">Cadastrar mais Produtos</button>    
+            </div>
+        </div>
+    </div>
+
+    <div id="createCategory" class="modal">
+        <div class="modal-content">
+            <div class="modal-header-category">
+                <h3>Cadastrar Categoria</h3>
+                <span class="close" onclick="closeModal('createCategory')">&times;</span>
+            </div>
+          <div class="modal-body">
+              <input id="categoryName" type="text">
+              <button type="button" onclick="createCategory('createCategory')">Confirmar</button>
+          </div>
+        </div>
+    </div>
+
+    <div id="deleteProduct" class="modal">
+        <div class="modal-content">
+            <div class="modal-header-product">
+                <h3>Apagar Produto</h3>
+            </div>
+          <div class="modal-body">
+                <p class="text-center">Deseja realmente apagar este produto?</p>
+                <div class="buttons_modal">
+                    <button type="button" onclick="deleteProduct()">Sim, apagar</button>
+                    <button type="button" onclick="closeModal('deleteProduct')">Não</button>
+                </div>
+          </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>2022 | <a href="https://usemobile.com.br/">Usemobile.</a> Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

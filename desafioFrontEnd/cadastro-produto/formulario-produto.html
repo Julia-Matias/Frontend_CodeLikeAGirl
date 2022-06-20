@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Itacolomi</title>
+    <link rel="stylesheet" href="style-formulario-produto.css">
+    <link rel="stylesheet" href="./drag-drop/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <figure class="logo__figure">
+          <img src="../img/LOGO.svg" alt="logo"/>
+        </figure>
+        <div id="name_user">Olá, Júlia!</div>
+        <figure class="sair__figure">
+            <img src="../img/ic_exit.svg" alt="sair"/>
+            <label for="sair">Sair</label>
+          </figure>
+
+    </div>
+
+    <figure class="ic_back">
+        <a onclick="back()">
+            <img src="../img/ic_back.svg">
+        </a>
+    </figure>
+
+    <div class="conteudo">    
+        <form id="formulario_cadastro">
+            <div class="cadastro_produto">
+                <figure class="icon_product">
+                    <img src="../img/ic_produtos.svg" alt="product">
+                    <p>Cadastrar produtos</p>
+                </figure>
+                    <p class="etapa">Etapa <span id="etapa"></span> de 2</p>
+            </div>
+            <div class="flex-column conteiner" id="etapa_1">
+                <div class="flex-column formulario">
+                    <input class="formulario-campos" type="text" placeholder="Nome do Produto" name="name" >
+                    <input class="formulario-campos" type="text" placeholder="Descrição" name="description" >
+                    <input class="formulario-campos" type="number" placeholder="Valor (R$)" name="value" >
+                    <select class="formulario-campos" placeholder="Categoria" name="categoryId" id="categories" ></select>
+                    <!-- <input type="file" name="image" id="image"> -->
+                </div>
+                
+                <div class="flex-column porcao">
+                    <p>Para quantas pessoas?</p>
+                    <span>
+                        <input type="radio" name="personCount" value="1">
+                        <label for="umaPessoa">Serve 1 pessoa</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="personCount" value="2">
+                        <label for="duasPessoas">Serve 2 pessoas</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="personCount" value="4">
+                        <label for="familia">Família - até 4 pessoas</label>
+                    </span>
+                </div>
+
+                <div class="flex-column disponibilidade">
+                    <p>Disponibilidade:</p>
+                    <span>
+                        <input type="radio" name="disponibility" value="true">
+                        <label for="disponivel">Produto Disponível</label>    
+                    </span>
+                    <span>
+                        <input type="radio" name="disponibility" value="false">
+                        <label for="indisponivel">Produto Indisponível</label>
+                    </span>               
+                </div>
+
+                <button type="submit">Próximo</button>
+            </div>
+
+            <div class="flex-column conteiner" id='etapa_2'>
+                <p class="select">Selecione a foto do produto</p>
+    
+                <div class="conteiner">
+                    <div class="drag-area">
+                        <div class="icon">
+                            <img src="../img/ic_dragdrop.svg">
+                        </div>
+                        <header>Anexar foto do produto.<br>
+                            Se preferir arraste e solte a foto.</header>
+                        <button type="button">Buscar arquivo...</button>
+                        <input type="file" hidden>
+                    </div>
+        
+                    <button type="submit">Cadastrar Produto</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>2022 | <a href="https://usemobile.com.br/">Usemobile.</a> Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="./cadastro-produto.js"></script>
+<script src="./drag-drop/script.js"></script>
+</html>

@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-orange-light: #F29C46;
+    --color-orange-dark: #C14D19;
+    --color-green-light: #72BC54;
+    --color-black-1: #262626;
+    --color-black-2: #292929;
+    --color-grey-1: #666;
+    --color-grey-2: #A3A3A3;
+    --color-grey-3: #CCC;
+    --color-grey-4: #E0E0E0;  
+    --color-white-1: #FFF;
+    --color-white-2: #F5F5F5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.col-60 {
+    width: 60%;
+}
+
+.flex-right {
+    display: flex;
+    justify-content: right;
+}
+
+.default-button {
+    background-color: var(--color-orange-dark);
+    color: var(--color-white-1);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 16px;
+    height: 40px;
+    width: 250px;
+    border: none;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header {
+    background-color: var(--color-orange-light);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0px 60px;
+}
+
+.logo__figure {
+    width: 105px;
+}
+
+.header div {
+    width: 80%;
+}
+
+.logo__figure img {
+    height: 80px;
+    width: 105px;
+}
+
+.sair__figure {
+    float: right;
+}
+
+.sair__figure img {
+    display: grid;
+}
+
+#name_user{
+    color: var(--color-black-1);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.categoria {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.categoria-menu {
+    color: var(--color-black-1);
+    font-size: 17px;
+    font-weight: 500;
+    word-break: break-all;
+    border: 1px solid var(--color-black-1);
+    border-radius: 6px;
+    min-height: 40px;
+    width: 150px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-menu:hover {
+    color: var(--color-green-light);
+    border: 1px solid var(--color-green-light);
+}
+
+.add-btn {
+    background-color: var(--color-orange-light);
+    color: var(--color-white-1);
+    text-align: center;
+    border: 1px solid var(--color-orange-light);
+}
+
+.add-btn:hover {
+    background-color: var(--color-orange-dark);
+    color: var(--color-white-1);
+    text-align: center;
+    border: 1px solid var(--color-orange-dark);
+}
+
+.search  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.icone_produto {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+#busca {
+    background: var(--color-white-2) url(img/ic_busca.svg) left no-repeat;
+    border-radius: 16px;
+    border: none;
+    height: 45px;
+    width: 500px;
+    padding-left: 30px;
+}
+
+.ordenacao {
+    background: var(--color-white-2) ;
+    border-radius: 16px;
+    border: none;
+    height: 45px;
+    width: 120px;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.texto1 {
+    color: var(--color-orange-dark);
+    padding-top: 20px;
+}
+
+.texto2 {
+    color: var(--color-black-1);
+    padding: 20px 0;
+}
+
+.conteiner_produtos {
+    display: grid;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.conteiner-item {
+    display: flex;
+    background-color: #F5F5F5;
+    border-radius: 16px;
+    padding: 10px;
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-figure img {
+    width: 155px;
+    height: 155px;
+}
+
+.info_produtos {
+    margin-left: 20px;
+    text-align: left;
+    width: 50%;
+    height: 80%;
+    border-right: 1px solid #000;
+}
+
+.botoes_produtos {
+    width: 25%;
+    height: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.buttons_modal {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#deleteProduct .modal-body button:first-child {
+    background-color: var(--color-orange-dark);
+}
+
+#deleteProduct .modal-body button:last-child {
+    color: var(--color-orange-dark);
+    background-color: white;
+    border: 1px solid var(--color-orange-dark);
+}
+
+.titulo {
+    color: var(--color-orange-dark);
+}
+
+.porcao {
+    color: var(--color-orange-light);
+}
+
+.descricao {
+    color: var(--color-grey-1);
+}
+
+.valor {
+    color: var(--color-green-light);
+}
+
+footer {
+    background-color: var(--color-white-2);
+    color: var(--color-grey-light-1);
+    font-weight: 400;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    position: static;
+    width: 100%;
+    bottom: 0;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--color-black-1);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+}
+
+.modal-header-category,
+.modal-header-product {
+    color: var(--color-orange-dark);
+    display: flex;
+    align-items: baseline;
+}
+
+.modal-header-category {
+    justify-content: space-between;
+}
+
+.modal-header-product {
+    justify-content: center;
+}
+
+.modal-body {
+    display: grid;
+    padding: 20px 0;
+}
+
+.modal-body input {
+    color: var(--color-grey-1);
+    border: 1px solid var(--color-orange-dark);
+    border-radius: 10px;
+    padding: 13px;
+}
+
+.modal-body button {
+    margin-top: 20px;
+    float: right;
+    width: 180px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--color-white-1);
+    background-color: var(--color-grey-2);
+    border: none;
+    border-radius: 16px;
+}
+
+.modal-body button:hover {
+    background-color: var(--color-orange-dark);
+    cursor: pointer;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

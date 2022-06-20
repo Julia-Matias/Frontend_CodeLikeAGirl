@@ -1,0 +1,50 @@
+.drag-area {
+    background-color: #F5F5F5;
+    border: 2px solid #C14D19;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid #fff;
+}
+
+.drag-area .icon img{
+    font-size: 100px;
+    width: 80px;
+    height: 65px;
+    object-fit: cover;
+}
+
+.drag-area header {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.drag-area button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: #C14D19;
+    color: #fff;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.select {
+    text-align: left;
+}
